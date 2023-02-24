@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+nav{
+    height: 8vh;
+    width: 100%;
+    background-color: #D30A40;
+    
+
+}
+footer{
+    height: 8vh;
+    width: 100%;
+    background-color: #D30A40;
+    position: absolute;
+    bottom: 0;
+    
+
+}
+
+nav .namePokemon{
+    height: 100%;
+    width: 15%;
+    color: #129FBD;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 5rem;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+main{
+    display:flex;
+    height: 84vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#Pokedex{
+ display: grid;
+ width:  50%;
+ height: 80%;
+ border: 1px solid;
+ grid-template: repeat(10, 10%) / repeat(10, 10%);
+ background-color: rgb(12, 126, 171)
+ 
+}
+
+main #Pokedex .pokedeximg{  
+    grid-area: 1 / 1/ 11 / 11;
+    width:  100%;
+    height: 100%;
+}
+
+main #Pokedex .imgpokemon{
+    width:  100%;
+    height: 100%;
+    grid-area: 4/ 2/ 7 / 5;
+}
+
+
+
+button { 
+
+grid-area: 9/2/12/4;
+font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+font-size: 17px;
+padding: 1em 2.7em;
+font-weight: 500;
+background: #1F2937;
+color: white;
+border: none;
+position: relative;
+overflow: hidden;
+border-radius: 0.6em;
+}
+   
+.gradient {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+border-radius: 0.6em;
+margin-top: -0.25em;
+background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.label {
+position: relative;
+top: -1px;
+}
+
+.transition {
+transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+transition-duration: 500ms;
+background-color: rgba(16, 185, 129, 0.6);
+border-radius: 9999px;
+width: 0;
+height: 0;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+
+button:hover .transition {
+width: 14em;
+height: 14em;
+}
+
+button:active {
+transform: scale(0.97);
+}
+
+
+
